@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    background:
+        radial-gradient(circle at 15% 20%, #fff8ed 0 5%, transparent 6%),
+        radial-gradient(circle at 85% 80%, #fff8ed 0 7%, transparent 8%),
+        #f8e5e5;
+    color: #704c4b;
+}
+
+.cartao {
+    width: 100%;
+    max-width: 560px;
+    padding: 38px 24px;
+    text-align: center;
+    background: #fffaf4;
+    border: 2px solid #efd4c9;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px #a66c6c20;
+    overflow: hidden;
+    position: relative;
+    animation: aparecer 1s ease both;
+}
+
+.detalhe {
+    color: #b77a7c;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 46px);
+    color: #a75d69;
+    margin: 18px 0 12px;
+}
+
+.subtitulo {
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.xicara {
+    width: 180px;
+    height: 185px;
+    margin: 25px auto 22px;
+    position: relative;
+    animation: flutuar 3s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.pratinho {
+    position: absolute;
+    bottom: 12px;
+    left: 18px;
+    width: 145px;
+    height: 17px;
+    background: #e9b9b6;
+    border-radius: 50%;
+    box-shadow: 0 5px 0 #d99b9b;
+}
+
+.corpo-xicara {
+    position: absolute;
+    bottom: 29px;
+    left: 32px;
+    width: 112px;
+    height: 105px;
+    background: linear-gradient(135deg, #fff 0%, #f6d4d0 75%);
+    border: 3px solid #dca5a3;
+    border-radius: 12px 12px 42px 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    box-shadow: inset -8px -4px 0 #eac1bf;
+    z-index: 2;
+}
+
+.alca {
+    position: absolute;
+    bottom: 53px;
+    right: 8px;
+    width: 47px;
+    height: 49px;
+    border: 10px solid #dca5a3;
+    border-left: 0;
+    border-radius: 0 25px 25px 0;
+    z-index: 1;
+}
+
+.coracao {
+    position: absolute;
+    bottom: 63px;
+    left: 77px;
+    color: #bd727a;
+    font-size: 23px;
+    z-index: 3;
+}
+
+.cha {
+    position: absolute;
+    top: 8px;
+    left: 72px;
+    color: #c99a92;
+    font-size: 30px;
+    animation: fumaca 2s ease-in-out infinite;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    padding: 15px 24px;
+    margin: 14px 0;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    background: #b96f7a;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #92515c;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #a85c68;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #92515c;
+}
+
+.mensagem {
+    margin: 22px auto 0;
+    padding: 22px 18px;
+    background: #f9e9e5;
+    border: 1px dashed #d8a2a0;
+    border-radius: 20px;
+    line-height: 1.9;
+    animation: revelar 0.8s ease both;
+}
+
+.mensagem h2 {
+    color: #a75d69;
+    font-size: 27px;
+}
+
+.amor {
+    color: #ad5b6d;
+    font-weight: 700;
+}
+
+.escondida {
+    display: none;
+}
+
+.rodape {
+    margin-top: 28px;
+    font-size: 12px;
+    color: #ad8380;
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes fumaca {
+    0%, 100% { transform: translateY(0); opacity: 0.4; }
+    50% { transform: translateY(-10px); opacity: 1; }
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes revelar {
+    from { opacity: 0; transform: translateY(18px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 420px) {
+    .cartao {
+        padding: 28px 17px;
+    }
+}
